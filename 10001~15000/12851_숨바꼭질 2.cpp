@@ -24,13 +24,13 @@ int main() {
 		}
 		else if (1.5 * location > K) {    // K가 location의 1.5배보다 작을 경우
 			if (location - 1 >= 0) {
-				if (!visited[location - 1]) {
+				if (!visited[location - 1]) {    // X - 1로 이동
 					visited[location - 1] = cnt; q.push({ location - 1,cnt });
 				}
 				else if (visited[location - 1] == cnt) q.push({ location - 1,cnt });
 			}
 			if (location + 1 <= 100000) {
-				if (!visited[location + 1]) {
+				if (!visited[location + 1]) {    // X + 1로 이동
 					visited[location + 1] = cnt; q.push({ location + 1,cnt });
 				}
 				else if (visited[location + 1] == cnt) q.push({ location + 1,cnt });
